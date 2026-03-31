@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YIP IN TSOI LAB — Internal AI Innovation Playground. Submit, vet, and commercialize AI solutions across teams and domains.">
+  <title>YIP IN TSOI LAB — AI Innovation Playground</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e63946'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='18'>Y</text></svg>">
+</head>
+<body>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo">Y</div>
+        <div class="nav-title">YIP IN TSOI <span class="lab-badge">LAB</span></div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#projects">Tools</a></li>
+        <li><a href="#workflow">About</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search assets..." id="searchInput">
+        </div>
+        <a href="#" class="btn-deploy" id="btnDeploy">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"/></svg>
+          <span>Deploy Project</span>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE NAV ========== -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+    <a href="#">Home</a>
+    <a href="#projects">Tools</a>
+    <a href="#workflow">About</a>
+    <a href="#" class="btn-deploy" style="margin-top: 16px;">Deploy Project</a>
+  </div>
+
+  <!-- ========== HERO / STATS ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-top fade-up">
+        <div class="hero-label">innovation playground</div>
+        <h1 class="hero-title">
+          BROWSE <span class="highlight">AI SOLUTIONS</span><br>
+          FROM EVERY TEAM
+        </h1>
+        <p class="hero-desc">
+          A central playground for all teams to submit, explore, and evolve AI-powered ideas — 
+          from sandbox experiments to market-ready solutions.
+        </p>
+      </div>
+
+      <div class="stats-grid fade-up">
+        <div class="stat-card">
+          <div class="stat-icon">💡</div>
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">Total Ideas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🧪</div>
+          <div class="stat-number" data-count="12">0</div>
+          <div class="stat-label">In Sandbox</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-number" data-count="8">0</div>
+          <div class="stat-label">Production Ready</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🚀</div>
+          <div class="stat-number" data-count="4">0</div>
+          <div class="stat-label">Commercialized</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FILTER + PROJECT GRID ========== -->
+  <section class="filter-section" id="projects">
+    <div class="container">
+      <div class="filter-header fade-up">
+        <div>
+          <div class="section-label">loadout library</div>
+          <h2 class="section-title">Browse Available Tools</h2>
+        </div>
+        <div class="filter-toggle-wrap">
+          <button class="filter-toggle-btn active" data-filter="team" id="btnFilterTeam">Browse by Team</button>
+          <button class="filter-toggle-btn" data-filter="domain" id="btnFilterDomain">Browse by Domain</button>
+        </div>
+      </div>
+
+      <!-- Sub-category Chips -->
+      <div class="filter-chips fade-up" id="filterChips">
+        <!-- dynamically rendered by JS -->
+      </div>
+
+      <!-- Project Grid -->
+      <div class="project-grid fade-up" id="projectGrid" style="margin-top: 28px;">
+        <!-- dynamically rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SUCCESS STORIES ========== -->
+  <section class="success-section" id="success">
+    <div class="container">
+      <div class="success-header fade-up">
+        <div class="section-label">hall of fame</div>
+        <h2 class="section-title">Success Stories</h2>
+        <p style="color: var(--text-secondary); font-size: 14px; margin-top: 8px;">
+          Ideas born in the Lab that became real commercial products.
+        </p>
+      </div>
+      <div class="success-grid fade-up" id="successGrid">
+        <!-- dynamically rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WORKFLOW / PIPELINE ========== -->
+  <section class="workflow-section" id="workflow">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">commercialization pipeline</div>
+        <h2 class="section-title">From Idea to Market</h2>
+        <p style="color: var(--text-secondary); font-size: 14px; margin-top: 8px;">
+          Every innovation follows this structured path from concept to customer.
+        </p>
+      </div>
+      <div class="workflow-pipeline fade-up">
+        <div class="workflow-step">
+          <div class="workflow-step-num">1</div>
+          <div class="workflow-step-title">Submit</div>
+          <div class="workflow-step-desc">Any team member posts an AI idea with a brief description and target domain.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-step-num">2</div>
+          <div class="workflow-step-title">Sandbox</div>
+          <div class="workflow-step-desc">Build a prototype in our sandbox environment. Test feasibility and collect feedback.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-step-num">3</div>
+          <div class="workflow-step-title">Vetting</div>
+          <div class="workflow-step-desc">Peer voting & domain expert review to evaluate market potential and technical viability.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-step-num">4</div>
+          <div class="workflow-step-title">Testing</div>
+          <div class="workflow-step-desc">Internal deployment for real usage. Measure performance metrics and gather user data.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="workflow-step-num">5</div>
+          <div class="workflow-step-title">Production</div>
+          <div class="workflow-step-desc">Approved solutions are packaged, branded, and deployed as commercial offerings.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT DETAIL MODAL ========== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-header">
+        <div class="modal-badges" id="modalBadges"></div>
+        <span class="status-tag" id="modalStatus"></span>
+      </div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-meta-row">
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Team</span>
+          <span class="modal-meta-value" id="modalTeam"></span>
+        </div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Domain</span>
+          <span class="modal-meta-value" id="modalDomain"></span>
+        </div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Date Added</span>
+          <span class="modal-meta-value" id="modalDate"></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-vote" id="btnVote">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905a3.61 3.61 0 01-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+          <span id="btnVoteText">Upvote</span>
+          <span class="vote-count" id="modalVotes"></span>
+        </button>
+        <button class="btn-modal-secondary" id="modalShareBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          Share
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SUBMIT IDEA MODAL ========== -->
+  <div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitModalTitle">
+    <div class="modal-box modal-box--form">
+      <button class="modal-close" id="submitModalClose" aria-label="Close">&times;</button>
+      <div class="modal-form-header">
+        <div class="modal-form-icon">🚀</div>
+        <h2 class="modal-title" id="submitModalTitle">Submit Your Innovation</h2>
+        <p class="modal-form-subtitle">Share your AI idea with the Lab. The best ideas get fast-tracked to production.</p>
+      </div>
+      <form class="idea-form" id="ideaForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ideaTitle">Idea Title <span class="req">*</span></label>
+            <input type="text" id="ideaTitle" placeholder="e.g. AI-powered document parser" maxlength="80" required>
+          </div>
+        </div>
+        <div class="form-row form-row--2col">
+          <div class="form-group">
+            <label for="ideaTeam">Your Team <span class="req">*</span></label>
+            <select id="ideaTeam" required>
+              <option value="">— Select team —</option>
+              <option value="HR">HR</option>
+              <option value="Product">Product</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Finance">Finance</option>
+              <option value="Operations">Operations</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ideaDomain">Target Domain <span class="req">*</span></label>
+            <select id="ideaDomain" required>
+              <option value="">— Select domain —</option>
+              <option value="Longevity">Longevity</option>
+              <option value="Sustainability">Sustainability</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Finance">Finance</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Food Delivery">Food Delivery</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Education">Education</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ideaDesc">Description <span class="req">*</span></label>
+            <textarea id="ideaDesc" placeholder="Briefly describe the AI idea, the problem it solves, and how it works..." rows="4" maxlength="400" required></textarea>
+            <span class="char-count" id="charCount">0 / 400</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ideaName">Your Name <span class="req">*</span></label>
+            <input type="text" id="ideaName" placeholder="e.g. Jane Smith" required>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-modal-secondary" id="cancelSubmit">Cancel</button>
+          <button type="submit" class="btn-submit-idea">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"/></svg>
+            Submit Idea
+          </button>
+        </div>
+      </form>
+      <!-- Success State -->
+      <div class="form-success" id="formSuccess" style="display:none;">
+        <div class="form-success-icon">✅</div>
+        <h3>Idea Submitted!</h3>
+        <p>Your innovation has been added to the Lab queue. The team will review it shortly.</p>
+        <button class="btn-submit-idea" id="successClose" style="margin-top:24px;">Back to Lab</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; 2026 <span class="red">YIP IN TSOI</span> — Lab Platform v2.0 &nbsp;|&nbsp; Internal Innovation Playground
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
