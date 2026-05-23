@@ -83,8 +83,6 @@ const projects = [
     tags: ["RAG", "Private Knowledge Base", "Speech-to-Text", "Thai NLP"],
     features: ["RAG Pipeline: ค้นหาข้อมูลจากเอกสารภายในแบบ Semantic Search แล้วนำมาสร้างคำตอบ", "Database Connect: ดึงข้อมูลจาก Database มาตอบคำถามเชิงตัวเลขและสถิติได้แบบ Real-time", "Voice Input: พูดภาษาไทยใส่ไมค์ได้เลย ไม่ต้องพิมพ์", "Source Citation: ทุกคำตอบบอกแหล่งอ้างอิง ตรวจสอบได้ว่า AI ดึงข้อมูลมาจากไหน"],
     deployment: "Internal Used",
-    darkCard: true,
-    extraButtons: ["ทดลอง Chatbot →", "ทดลอง Voice Input →"],
     refLink: "#"
   },
   {
