@@ -659,10 +659,10 @@ body {
 
 .card-title {
   font-family: var(--font-heading);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.4;
 }
 
@@ -1688,13 +1688,7 @@ body {
 /* ============================================
    PAGE VIEW SYSTEM
    ============================================ */
-.page-view {
-  display: none;
-}
-
-.page-view.active {
-  display: block;
-}
+/* PAGE VIEW SYSTEM - Removed for multi-page support */
 
 /* ============================================
    DASHBOARD SYSTEM
@@ -2123,4 +2117,252 @@ body {
 
 .vote-count-num {
   font-variant-numeric: tabular-nums;
+}
+
+/* --- Dark Theme Modal (Edit) --- */
+.modal-overlay--dark {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-box--dark {
+  background: #0B0E14;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-box--dark .modal-title {
+  color: #FFFFFF;
+}
+
+.modal-box--dark .form-group label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.modal-box--dark input,
+.modal-box--dark select,
+.modal-box--dark textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.modal-box--dark input:focus,
+.modal-box--dark select:focus,
+.modal-box--dark textarea:focus {
+  border-color: var(--accent-red);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-box--dark .modal-close {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-box--dark .btn-ai-analyze {
+  background: rgba(226, 30, 38, 0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+}
+
+.modal-box--dark .tags-input-wrap {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.modal-box--dark .form-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-update-project {
+  background: var(--accent-red);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Delete Confirmation Modal --- */
+.modal-box--confirm {
+  max-width: 440px;
+  padding: 40px;
+  text-align: left;
+  border-radius: var(--radius-lg);
+}
+
+.confirm-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.confirm-text {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-confirm-cancel {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-confirm-cancel:hover {
+  background: #e5e7eb;
+}
+
+.btn-confirm-delete {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.btn-confirm-delete:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);
+}
+
+/* ============================================
+   LOGIN PAGE
+   ============================================ */
+.login-body {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 40px;
+  text-align: center;
+}
+
+.login-logo {
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 72px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.login-title {
+  color: #8B0000;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+.login-subtitle {
+  color: #6B7280;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.login-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #D1D5DB;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #E21E26;
+  z-index: 1;
+  position: relative;
+}
+
+.login-input[type="email"] {
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+
+.login-input[type="password"] {
+  border-radius: 0 0 6px 6px;
+}
+
+.btn-login {
+  background-color: #E21E26;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #c81a22;
+}
+
+.login-lock-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+}
+
+/* Updated Nav Logo sizing */
+.nav-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
 }

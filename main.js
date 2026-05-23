@@ -8,15 +8,15 @@ const projects = [
     id: 1,
     title: "Agent Office",
     desc: "Coming Soon — Agentic AI solution for Watsons Thailand.",
-    team: "Watsons Thailand",
+    team: "DAS",
+    customer: "Watsons Thailand",
     domain: "Agentic AI",
     target: "Agentic AI",
     status: "sandbox",
     votes: 0,
     date: "2026-05-01",
-    deployment: "Try Out",
-    comingSoon: false,
-    icon: "🤖",
+    deployment: "",
+    comingSoon: true,
     tags: [],
     features: [],
     refLink: "#"
@@ -25,145 +25,147 @@ const projects = [
     id: 2,
     title: "Rider Uniform Verifier",
     desc: "ส่งรูปไรเดอร์เข้ามา AI จะบอกได้ทันทีว่าคนในภาพใส่เสื้อยูนิฟอร์มสีม่วง-เหลืองของ Robinhood ถูกต้องหรือไม่ พร้อมระบุ Confidence Score และเหตุผลประกอบ",
-    team: "Robinhood — Operations",
+    team: "DAS",
+    customer: "Robinhood — Operations",
     domain: "Delivery",
     target: "Delivery",
     status: "internal",
     votes: 34,
     date: "2026-03-10",
-    icon: "🛵",
     tags: ["Gemini 2.5 Pro", "Vision AI", "FastAPI"],
     features: ["ตรวจสีเสื้อ + โลโก้ อัตโนมัติ", "ลดภาระ QC ของทีม Operations", "ตอบกลับภายใน 2-3 วินาที", "แสดงค่า Confidence score 0-100%"],
-    deployment: "Try Out",
+    deployment: "Internal Used",
     refLink: "#"
   },
   {
     id: 3,
     title: "Food Delivery Verifier",
     desc: "แก้ปัญหาลูกค้าสั่ง \"ข้าวมันไก่\" แต่ได้ \"ข้าวหมูแดง\" ระบบจะรับรูปอาหารที่จัดส่งจริงเทียบกับชื่อเมนูที่สั่ง แล้วตัดสินว่าตรงกันหรือไม่ พร้อมบอกว่า AI มองเห็นอาหารอะไรในรูป",
-    team: "Robinhood — Quality Assurance",
+    team: "DAS",
+    customer: "Robinhood — Quality Assurance",
     domain: "Delivery",
     target: "Delivery",
     status: "internal",
     votes: 28,
     date: "2026-02-20",
-    icon: "📦",
     tags: ["Gemini 2.5 Pro", "Multimodal", "Cloud Run"],
     features: ["เทียบรูปจริง vs ชื่อเมนู", "ลด Complaint จากลูกค้า", "แสดง Similarity score 0-100%", "บอกชื่ออาหารที่ AI เห็นในรูป"],
-    deployment: "Try Out",
+    deployment: "Internal Used",
     refLink: "#"
   },
   {
     id: 4,
     title: "Food Auto-Tagger",
     desc: "ร้านค้าแค่อัปโหลดรูปเมนู AI จะติ๊กหมวดหมู่ให้อัตโนมัติจาก 39 หมวดของ Robinhood (เช่น \"อาหารจานเดียว\", \"อาหารญี่ปุ่น\", \"ของทอด\") โดยสามารถเลือกได้หลายหมวดพร้อมกัน",
-    team: "Robinhood — Merchant Tools",
+    team: "DAS",
+    customer: "Robinhood — Merchant Tools",
     domain: "Delivery",
     target: "Delivery",
     status: "internal",
     votes: 45,
     date: "2026-01-15",
-    icon: "🏷️",
     tags: ["Gemini 2.5 Pro", "Schema Enforcement", "39 Categories"],
     features: ["มี 39 หมวดหมู่ครอบคลุมทุกประเภท", "Multi-tag ติ๊กได้หลายหมวด", "ช่วยเรื่อง Search Optimization บนแอป", "ร้านค้าแค่ตรวจความถูกต้องแล้วกดยืนยัน"],
-    deployment: "Try Out",
+    deployment: "Internal Used",
     refLink: "#"
   },
   {
     id: 5,
     title: "YIP AI Chatbot",
     desc: "Chatbot ที่เข้าถึงข้อมูลภายในองค์กรได้โดยตรง ไม่ว่าจะเป็นเอกสาร ระเบียบ หรือข้อมูลจากฐานข้อมูล พนักงานแค่ถามเป็นภาษาธรรมชาติ AI จะค้นหาและตอบพร้อมอ้างอิงแหล่งที่มา รองรับการพิมพ์ด้วยเสียงภาษาไทย",
-    team: "Enterprise — Knowledge Management",
+    team: "DAS",
+    customer: "Enterprise — Knowledge Management",
     domain: "Chatbot",
     target: "Chatbot",
     status: "internal",
     votes: 52,
     date: "2025-12-01",
-    icon: "💬",
     tags: ["RAG", "Private Knowledge Base", "Speech-to-Text", "Thai NLP"],
     features: ["RAG Pipeline: ค้นหาข้อมูลจากเอกสารภายในแบบ Semantic Search แล้วนำมาสร้างคำตอบ", "Database Connect: ดึงข้อมูลจาก Database มาตอบคำถามเชิงตัวเลขและสถิติได้แบบ Real-time", "Voice Input: พูดภาษาไทยใส่ไมค์ได้เลย ไม่ต้องพิมพ์", "Source Citation: ทุกคำตอบบอกแหล่งอ้างอิง ตรวจสอบได้ว่า AI ดึงข้อมูลมาจากไหน"],
-    deployment: "Try Out",
+    deployment: "Internal Used",
+    darkCard: true,
+    extraButtons: ["ทดลอง Chatbot →", "ทดลอง Voice Input →"],
     refLink: "#"
   },
   {
     id: 6,
     title: "YIP AI AML",
     desc: "ระบบตรวจจับธุรกรรมต้องสงสัยด้วย Behavioral AI แทนที่ระบบ Rule-Based แบบเดิม โดย AI จะเรียนรู้พฤติกรรมปกติของลูกค้าแต่ละคน แล้วจับ \"ความผิดปกติ\" ที่ระบบเดิมมองข้าม พร้อมอธิบายเหตุผลให้เจ้าหน้าที่ ปปง. (AML) เข้าใจได้",
-    team: "Banking — Anti-Money Laundering",
+    team: "DAS",
+    customer: "Banking — Anti-Money Laundering",
     domain: "Finance",
     target: "Finance",
     status: "internal",
     votes: 38,
     date: "2026-01-20",
-    icon: "🛡️",
     tags: ["XGBoost", "SHAP", "MLOps", "Behavioral AI"],
     features: ["ลด False Positive ได้อย่างมีนัยสำคัญ", "Explainable AI อธิบายเหตุผลได้ทุกเคส", "มีระบบ Human-in-the-Loop Feedback", "รองรับการทำรายงาน ปปง. 1-03"],
-    deployment: "Try Out",
+    deployment: "Pilot Phase",
     refLink: "#"
   },
   {
     id: 7,
     title: "Customs HS Code Classifier",
     desc: "ถ่ายรูปสินค้าหรือพิมพ์ชื่อสินค้าเข้ามา AI จะระบุพิกัด HS Code 8 หลักตามระบบของกรมศุลกากรไทย พร้อมอธิบายเหตุผลว่าทำไมถึงจัดเข้าพิกัดนั้น",
-    team: "กรมศุลกากร — Trade Compliance",
+    team: "DAS",
+    customer: "กรมศุลกากร — Trade Compliance",
     domain: "Finance",
     target: "Finance",
     status: "commercial",
     votes: 63,
     date: "2025-11-05",
-    icon: "📋",
     tags: ["Gemini 2.5 Pro", "Multimodal", "Customs"],
     features: ["รับได้ทั้งรูปภาพและข้อความ", "ระบุ HS Code 8 หลักของไทย", "อธิบายตามหลักพิกัดศุลกากร (GIR)", "มีคำอธิบายทั้งภาษาไทย-อังกฤษ"],
-    deployment: "Try Out",
+    deployment: "Commercialized",
     refLink: "#"
   },
   {
     id: 8,
     title: "Contact Center Analytics",
     desc: "ระบบแปลงไฟล์เสียงจาก Call Center เป็นข้อความ สามารถแยกผู้พูดได้ 2 ฝั่ง (Agent / Customer) แล้ววิเคราะห์ Sentiment (อารมณ์ความรู้สึก) อัตโนมัติ เพื่อให้ทีม CX คัดกรองเคสที่ต้องดูแลเร่งด่วน",
-    team: "Enterprise — Customer Service",
+    team: "DAS",
+    customer: "Enterprise — Customer Service",
     domain: "Customer Service",
     target: "Customer Service",
     status: "commercial",
     votes: 41,
     date: "2025-10-15",
-    icon: "📞",
     tags: ["Speech-to-Text", "Sentiment", "Batch Processing", "Local Deployment"],
     features: ["รองรับภาษาไทยโดยเฉพาะ", "Speaker Diarization แยกผู้พูด 2 ฝั่ง", "Sentiment Analysis วิเคราะห์อารมณ์อัตโนมัติ", "สามารถ Export ข้อมูลเป็น CSV"],
-    deployment: "Try Out",
+    deployment: "Commercialized",
     refLink: "#"
   },
   {
     id: 9,
     title: "BDI AI Report Writer",
     desc: "ระบบรับข้อมูลดิบหลายร้อยหัวข้อจากไฟล์ CSV แล้วให้ AI เขียนรายงานฉบับเต็มออกมาเป็นไฟล์ Word อัตโนมัติ ครอบคลุมทั้งรายงานผลการศึกษาและรายงานมาตรฐาน ตามรูปแบบเอกสารราชการไทย",
-    team: "BDI — Document Automation",
+    team: "DAS",
+    customer: "BDI — Document Automation",
     domain: "Document",
     target: "Document",
     status: "commercial",
     votes: 55,
     date: "2025-09-20",
-    icon: "📄",
     tags: ["Gemini 2.5 Pro", "Vertex AI", "python-docx", "50+ TOR Topics", "Local Deployment"],
     features: ["Dual Micro-Chunking ป้อนข้อมูลให้ AI ทีละหัวข้อ", "ได้ทั้งผลการศึกษา + ข้อเสนอแนะ + Gap Analysis", "ใช้ภาษาเชิงบรรทัดฐานทางการ (ต้อง/ควร/อาจ)", "สร้างอภิธานศัพท์และบรรณานุกรมให้อัตโนมัติ"],
-    deployment: "Try Out",
+    deployment: "Commercialized",
     refLink: "#"
   },
   {
     id: 10,
     title: "AI OCR Scanner",
     desc: "AI-powered OCR scanning solution for Brother Thailand.",
-    team: "Brother Thailand",
+    team: "DAS",
+    customer: "Brother Thailand",
     domain: "Document",
     target: "Document",
     status: "commercial",
     votes: 0,
     date: "2026-04-01",
-    comingSoon: false,
-    icon: "🖨️",
-    tags: ["OCR", "Vision AI", "Automation"],
-    features: ["Extract text from scanned documents", "Support multiple languages", "Export to structured data", "Brother Thailand Integration"],
-    deployment: "Try Out",
+    deployment: "",
+    comingSoon: true,
+    tags: [],
+    features: [],
     refLink: "#"
   }
 ];
@@ -200,14 +202,14 @@ const discussionMessages = {
 };
 
 // ===== STATE =====
-let activeRole       = "All";
+let activeRole = "All";
 let currentProjectId = null;
-let activePage       = "home";
+let activePage = "home";
 let dashChartsInitialized = false;
 
 // Upvote persistence
 const votedKey = "yip_voted";
-function getVoted()    { try { return JSON.parse(localStorage.getItem(votedKey)) || {}; } catch { return {}; } }
+function getVoted() { try { return JSON.parse(localStorage.getItem(votedKey)) || {}; } catch { return {}; } }
 function setVoted(obj) { localStorage.setItem(votedKey, JSON.stringify(obj)); }
 
 // ===== DYNAMIC METRICS CALCULATION =====
@@ -241,46 +243,75 @@ function updateAllMetrics() {
 }
 
 // ===== DOM REFERENCES =====
-const projectGridEl    = document.getElementById("projectGrid");
-const successGridEl    = document.getElementById("successGrid");
-const roleFilter       = document.getElementById("roleFilter");
-const searchInput      = document.getElementById("searchInput");
-const navbar           = document.getElementById("navbar");
-const hamburgerBtn     = document.getElementById("hamburgerBtn");
-const mobileNav        = document.getElementById("mobileNav");
-const mobileNavClose   = document.getElementById("mobileNavClose");
-const scrollProgress   = document.getElementById("scrollProgress");
-const btnDeploy        = document.getElementById("btnDeploy");
+const projectGridEl = document.getElementById("projectGrid");
+const successGridEl = document.getElementById("successGrid");
+const roleFilter = document.getElementById("roleFilter");
+const searchInput = document.getElementById("searchInput");
+const navbar = document.getElementById("navbar");
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mobileNav = document.getElementById("mobileNav");
+const mobileNavClose = document.getElementById("mobileNavClose");
+const scrollProgress = document.getElementById("scrollProgress");
+const btnDeploy = document.getElementById("btnDeploy");
 
 // Project Modal
-const projectModal     = document.getElementById("projectModal");
-const modalClose       = document.getElementById("modalClose");
-const modalBadges      = document.getElementById("modalBadges");
-const modalStatus      = document.getElementById("modalStatus");
-const modalTitle       = document.getElementById("modalTitle");
-const modalDesc        = document.getElementById("modalDesc");
-const modalTeam        = document.getElementById("modalTeam");
-const modalDomain      = document.getElementById("modalDomain");
-const modalDate        = document.getElementById("modalDate");
-const modalVotes       = document.getElementById("modalVotes");
-const btnVote          = document.getElementById("btnVote");
-const btnVoteText      = document.getElementById("btnVoteText");
-const modalShareBtn    = document.getElementById("modalShareBtn");
+const projectModal = document.getElementById("projectModal");
+const modalClose = document.getElementById("modalClose");
+const modalBadges = document.getElementById("modalBadges");
+const modalStatus = document.getElementById("modalStatus");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalTeam = document.getElementById("modalTeam");
+const modalDomain = document.getElementById("modalDomain");
+const modalDate = document.getElementById("modalDate");
+const modalVotes = document.getElementById("modalVotes");
+const btnVote = document.getElementById("btnVote");
+const btnVoteText = document.getElementById("btnVoteText");
+const modalShareBtn = document.getElementById("modalShareBtn");
 
 // Submit Modal
-const submitModal      = document.getElementById("submitModal");
+const submitModal = document.getElementById("submitModal");
 const submitModalClose = document.getElementById("submitModalClose");
-const ideaForm         = document.getElementById("ideaForm");
-const ideaTitleEl      = document.getElementById("ideaTitle");
-const ideaDomainEl     = document.getElementById("ideaDomain");
-const cancelSubmit     = document.getElementById("cancelSubmit");
-const formSuccess      = document.getElementById("formSuccess");
-const successClose     = document.getElementById("successClose");
+const ideaForm = document.getElementById("ideaForm");
+const ideaTitleEl = document.getElementById("ideaTitle");
+const ideaRefLinkEl = document.getElementById("ideaRefLink");
+const ideaTeamEl = document.getElementById("ideaTeam");
+const ideaCustomerEl = document.getElementById("ideaCustomer");
+const ideaDomainEl = document.getElementById("ideaDomain");
+const ideaStatusEl = document.getElementById("ideaStatus");
+const ideaKnowledgeEl = document.getElementById("ideaKnowledge");
+const ideaTagsInput = document.getElementById("ideaTags");
+const btnAddTag = document.getElementById("btnAddTag");
+const tagsList = document.getElementById("tagsList");
+const cancelSubmit = document.getElementById("cancelSubmit");
+const formSuccess = document.getElementById("formSuccess");
+const successClose = document.getElementById("successClose");
 
 // Discussion Hub
 const discussionThread = document.getElementById("discussionThread");
-const discussionInput  = document.getElementById("discussionInput");
-const discussionSend   = document.getElementById("discussionSend");
+const discussionInput = document.getElementById("discussionInput");
+const discussionSend = document.getElementById("discussionSend");
+
+// Edit Modal
+const editModal = document.getElementById("editModal");
+const editModalClose = document.getElementById("editModalClose");
+const editForm = document.getElementById("editForm");
+const editId = document.getElementById("editProjectId");
+const editTitle = document.getElementById("editTitle");
+const editRefLink = document.getElementById("editRefLink");
+const editTeam = document.getElementById("editTeam");
+const editCustomer = document.getElementById("editCustomer");
+const editDomain = document.getElementById("editDomain");
+const editStatus = document.getElementById("editStatus");
+const editKnowledge = document.getElementById("editKnowledge");
+const editTagsInput = document.getElementById("editTagsInput");
+const editTagsList = document.getElementById("editTagsList");
+const btnAddEditTag = document.getElementById("btnAddEditTag");
+
+// Delete Modal
+const deleteModal = document.getElementById("deleteModal");
+const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
 
 // ===== PAGE NAVIGATION =====
 function switchPage(page, scrollTarget) {
@@ -319,6 +350,7 @@ function switchPage(page, scrollTarget) {
 }
 
 // Bind nav clicks
+/*
 document.querySelectorAll("[data-page]").forEach(el => {
   el.addEventListener("click", e => {
     e.preventDefault();
@@ -330,6 +362,7 @@ document.querySelectorAll("[data-page]").forEach(el => {
     document.body.style.overflow = "";
   });
 });
+*/
 
 // ===== RENDER PROJECTS (HOME) =====
 function statusLabel(s) {
@@ -337,6 +370,7 @@ function statusLabel(s) {
 }
 
 function renderProjects() {
+  if (!projectGridEl || !searchInput) return;
   const searchTerm = searchInput.value.toLowerCase().trim();
   let filtered = projects.filter(p => {
     if (activeRole !== "All") {
@@ -345,9 +379,9 @@ function renderProjects() {
     }
     if (searchTerm) {
       return p.title.toLowerCase().includes(searchTerm) ||
-             p.desc.toLowerCase().includes(searchTerm) ||
-             (p.team || "").toLowerCase().includes(searchTerm) ||
-             p.domain.toLowerCase().includes(searchTerm);
+        p.desc.toLowerCase().includes(searchTerm) ||
+        (p.team || "").toLowerCase().includes(searchTerm) ||
+        p.domain.toLowerCase().includes(searchTerm);
     }
     return true;
   });
@@ -372,11 +406,8 @@ function renderProjects() {
           <button class="btn-card-action btn-delete" title="Delete" onclick="event.stopPropagation(); deleteProject(${p.id})"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg></button>
         </div>
       </div>
-      <div class="card-icon-wrapper">
-        <span class="card-icon">${p.icon || '💡'}</span>
-      </div>
       <h3 class="card-title">${p.title}</h3>
-      <div class="card-team">${p.team || ''}</div>
+      <div class="card-team">${p.team || 'DAS'} ${p.customer ? '— ' + p.customer : ''}</div>
       <p class="card-desc">${p.desc}</p>
       ${p.features && p.features.length ? `
         <div class="card-features">
@@ -397,9 +428,12 @@ function renderProjects() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.757c1.246 0 2.25 1.004 2.25 2.25 0 .393-.105.759-.286 1.077l-1.933 3.383A4.5 4.5 0 0114.88 19H7.5v-7.5l2.121-2.121a3 3 0 00.879-2.121V6.5a1.5 1.5 0 113 0V10zM7.5 19H4.5A1.5 1.5 0 013 17.5V13a1.5 1.5 0 011.5-1.5h3" /></svg>
           <span class="vote-count-num">${p.votes + (voted[p.id] ? 1 : 0)}</span>
         </div>
-        <button class="btn-try-out" onclick="event.stopPropagation(); window.open('${p.refLink || '#'}', '_blank');">
-          Try Out →
-        </button>
+        <div style="display:flex; gap:8px;">
+          ${p.extraButtons ? p.extraButtons.map(btn => `<button class="btn-try-out" onclick="event.stopPropagation();">${btn}</button>`).join('') : ''}
+          <button class="btn-try-out" onclick="event.stopPropagation(); window.open('${p.refLink || '#'}', '_blank');">
+            ${p.status === 'commercial' ? 'Buy Now →' : 'Try Out →'}
+          </button>
+        </div>
       </div>
     </div>`).join("");
 
@@ -417,6 +451,7 @@ function renderProjects() {
 
 // ===== RENDER SUCCESS STORIES =====
 function renderSuccessStories() {
+  if (!successGridEl) return;
   successGridEl.innerHTML = successStories.map(s => `
     <div class="success-card">
       <div class="success-emoji">${s.emoji}</div>
@@ -427,17 +462,21 @@ function renderSuccessStories() {
 }
 
 // ===== ROLE FILTER =====
-roleFilter.addEventListener("change", () => {
-  activeRole = roleFilter.value;
-  renderProjects();
-});
+if (roleFilter) {
+  roleFilter.addEventListener("change", () => {
+    activeRole = roleFilter.value;
+    renderProjects();
+  });
+}
 
 // ===== SEARCH =====
 let searchTimeout;
-searchInput.addEventListener("input", () => {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(renderProjects, 200);
-});
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(renderProjects, 200);
+  });
+}
 
 // ===== PROJECT DETAIL MODAL =====
 function formatDate(d) {
@@ -453,7 +492,8 @@ function openProjectModal(id) {
   modalStatus.textContent = statusLabel(p.status);
   modalTitle.textContent = p.title;
   modalDesc.textContent = p.desc;
-  modalTeam.textContent = p.team || '';
+  const modalCustomer = document.getElementById("modalCustomer");
+  if (modalCustomer) modalCustomer.textContent = p.customer || '-';
   modalDomain.textContent = p.domain;
   modalDate.textContent = formatDate(p.date);
 
@@ -540,11 +580,11 @@ function renderDiscussion() {
 discussionSend.addEventListener("click", () => {
   const text = discussionInput.value.trim();
   if (!text) return;
-  discussionMessages.default.push({ 
-    name: "You", 
-    role: "User", 
-    team: "DAS TEAM", 
-    text: text, 
+  discussionMessages.default.push({
+    name: "You",
+    role: "User",
+    team: "DAS TEAM",
+    text: text,
     time: "Just now",
     color: "red"
   });
@@ -582,9 +622,6 @@ submitModal.addEventListener("click", e => { if (e.target === submitModal) close
 
 // Tags management
 const currentTags = [];
-const btnAddTag = document.getElementById("btnAddTag");
-const ideaTagsInput = document.getElementById("ideaTags");
-const tagsList = document.getElementById("tagsList");
 
 function renderTags() {
   if (!tagsList) return;
@@ -632,17 +669,18 @@ ideaForm.addEventListener("submit", e => {
   if (!valid) return;
 
   const statusMap = { "sandbox": "sandbox", "internal": "internal", "commercial": "commercial" };
+  const ideaCustomer = document.getElementById("ideaCustomer");
   projects.unshift({
     id: Date.now(),
     title: title,
     desc: document.getElementById("ideaKnowledge") ? document.getElementById("ideaKnowledge").value.trim() : "",
-    team: ideaTeam ? ideaTeam.value.trim() : "",
+    team: ideaTeam ? ideaTeam.value.trim() : "DAS",
+    customer: ideaCustomer ? ideaCustomer.value.trim() : "",
     domain: domain,
     target: domain,
     status: statusMap[ideaStatus.value] || "sandbox",
     votes: 0,
     date: new Date().toISOString().split("T")[0],
-    icon: "ðŸ’¡",
     tags: [...currentTags],
     features: [],
     deployment: ""
@@ -724,27 +762,6 @@ function initDashboardCharts() {
   }
 }
 
-// AI Auto-Analyze button handler
-const btnAiAnalyze = document.getElementById("btnAiAnalyze");
-if (btnAiAnalyze) {
-  btnAiAnalyze.addEventListener("click", () => {
-    const refLink = document.getElementById("ideaRefLink");
-    const knowledge = document.getElementById("ideaKnowledge");
-    if (!refLink || !knowledge) return;
-    if (!refLink.value.trim()) {
-      alert("à¸à¸£à¸¸à¸“à¸²à¹ƒà¸ªà¹ˆ Reference Link à¸à¹ˆà¸­à¸™à¹ƒà¸Šà¹‰ AI Auto-Analyze");
-      return;
-    }
-    btnAiAnalyze.textContent = "â³ Analyzing...";
-    btnAiAnalyze.disabled = true;
-    setTimeout(() => {
-      knowledge.value = `🔎§ à¸§à¸´à¸˜à¸µà¸à¸²à¸£à¹ƒà¸Šà¹‰à¸‡à¸²à¸™\nà¸£à¸°à¸šà¸šà¸£à¸±à¸šà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ˆà¸²à¸à¸¥à¸´à¸‡à¸à¹Œà¸—à¸µà¹ˆà¹ƒà¸«à¹‰à¸¡à¸²à¹à¸¥à¸°à¸›à¸£à¸°à¸¡à¸§à¸¥à¸œà¸¥à¸”à¹‰à¸§à¸¢ AI à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸£à¸¸à¸›à¹€à¸™à¸·à¹‰à¸­à¸«à¸²à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´\n\nâœ… à¸‚à¹‰à¸­à¸”à¸µà¹à¸¥à¸°à¸‚à¹‰à¸­à¸ˆà¸³à¸à¸±à¸”\n- à¸›à¸£à¸°à¸«à¸¢à¸±à¸”à¹€à¸§à¸¥à¸²à¹ƒà¸™à¸à¸²à¸£à¸­à¹ˆà¸²à¸™à¹à¸¥à¸°à¸ªà¸£à¸¸à¸›à¸‚à¹‰à¸­à¸¡à¸¹à¸¥\n- AI à¸­à¸²à¸ˆà¸•à¸µà¸„à¸§à¸²à¸¡à¸œà¸´à¸”à¸žà¸¥à¸²à¸”à¹ƒà¸™à¸šà¸²à¸‡à¸à¸£à¸“à¸µ à¸„à¸§à¸£à¸•à¸£à¸§à¸ˆà¸ªà¸­à¸šà¸à¹ˆà¸­à¸™à¹ƒà¸Šà¹‰à¸‡à¸²à¸™à¸ˆà¸£à¸´à¸‡\n\nðŸ“Š à¸œà¸¥à¸à¸£à¸°à¸—à¸šà¸—à¸µà¹ˆà¹„à¸”à¹‰à¸£à¸±à¸š\n- à¸¥à¸”à¹€à¸§à¸¥à¸²à¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™à¹„à¸”à¹‰ 50-70%\n- à¹€à¸žà¸´à¹ˆà¸¡à¸„à¸§à¸²à¸¡à¸ªà¸¡à¹ˆà¸³à¹€à¸ªà¸¡à¸­à¸‚à¸­à¸‡à¹€à¸­à¸à¸ªà¸²à¸£`;
-      btnAiAnalyze.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> AI Auto-Analyze Link`;
-      btnAiAnalyze.disabled = false;
-    }, 1500);
-  });
-}
-
 // ===== NAVBAR SCROLL + PROGRESS =====
 window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 20);
@@ -766,6 +783,14 @@ hamburgerBtn.addEventListener("click", () => {
 mobileNavClose.addEventListener("click", () => {
   mobileNav.classList.remove("active");
   document.body.style.overflow = "";
+});
+
+// Close mobile nav when clicking any link inside it
+document.querySelectorAll(".mobile-nav-overlay a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+    document.body.style.overflow = "";
+  });
 });
 
 // ===== SCROLL ANIMATIONS =====
@@ -808,28 +833,29 @@ function animateCounters() {
 // ===== INIT =====
 document.addEventListener("DOMContentLoaded", () => {
   updateAllMetrics();
-  renderProjects();
-  renderSuccessStories();
+
+  if (document.getElementById("page-home")) {
+    renderProjects();
+    renderSuccessStories();
+  }
+
+  if (document.getElementById("page-dashboard")) {
+    renderDashboardTable();
+    initDashboardCharts();
+  }
+
   initScrollAnimations();
   animateCounters();
 });
 
 
 function deleteProject(id) {
-  if (!confirm("Are you sure you want to delete this project?")) return;
-  const idx = projects.findIndex(p => p.id === id);
-  if (idx !== -1) {
-    projects.splice(idx, 1);
-    renderProjects();
-    updateAllMetrics();
-  }
+  currentProjectId = id;
+  openDeleteModal();
 }
 
 function editProject(id) {
-  openProjectModal(id);
-  // In a real app, this would enable edit mode in the modal.
-  // For now, we'll just show a hint.
-  setTimeout(() => alert("Edit mode enabled for: " + projects.find(p => p.id === id).title), 500);
+  openEditModal(id);
 }
 
 function toggleVote(id) {
@@ -840,3 +866,127 @@ function toggleVote(id) {
   renderProjects();
   updateAllMetrics();
 }
+
+// --- Edit Modal Logic ---
+let editTags = [];
+
+function openEditModal(id) {
+  const p = projects.find(x => x.id === id);
+  if (!p) return;
+  currentProjectId = id;
+
+  editId.value = p.id;
+  editTitle.value = p.title;
+  editRefLink.value = p.refLink || "";
+  editTeam.value = p.team || "DAS";
+  if (editCustomer) editCustomer.value = p.customer || "";
+  editDomain.value = p.domain;
+  editStatus.value = p.status;
+  editKnowledge.value = p.desc || "";
+
+  editTags = [...(p.tags || [])];
+  renderEditTags();
+
+  editModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeEditModal() {
+  editModal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+function renderEditTags() {
+  if (!editTagsList) return;
+  editTagsList.innerHTML = editTags.map((t, i) =>
+    `<span class="form-tag">${t} <button type="button" onclick="removeEditTag(${i})">&times;</button></span>`
+  ).join('');
+}
+
+window.removeEditTag = function (i) {
+  editTags.splice(i, 1);
+  renderEditTags();
+};
+
+if (btnAddEditTag) {
+  btnAddEditTag.addEventListener("click", () => {
+    const val = editTagsInput.value.trim();
+    if (val && editTags.length < 10) {
+      editTags.push(val);
+      editTagsInput.value = "";
+      renderEditTags();
+    }
+  });
+}
+
+if (editTagsInput) {
+  editTagsInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") { e.preventDefault(); btnAddEditTag.click(); }
+  });
+}
+
+if (editForm) {
+  editForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const id = parseInt(editId.value, 10);
+    const idx = projects.findIndex(p => p.id === id);
+    if (idx !== -1) {
+      projects[idx] = {
+        ...projects[idx],
+        title: editTitle.value.trim(),
+        refLink: editRefLink.value.trim(),
+        team: editTeam.value.trim(),
+        customer: typeof editCustomer !== 'undefined' && editCustomer ? editCustomer.value.trim() : "",
+        domain: editDomain.value,
+        target: editDomain.value,
+        status: editStatus.value,
+        desc: editKnowledge.value.trim(),
+        tags: [...editTags]
+      };
+      renderProjects();
+      updateAllMetrics();
+      closeEditModal();
+    }
+  });
+}
+
+if (editModalClose) editModalClose.addEventListener("click", closeEditModal);
+const cancelEditBtn = document.getElementById("cancelEdit");
+if (cancelEditBtn) cancelEditBtn.addEventListener("click", closeEditModal);
+if (editModal) editModal.addEventListener("click", e => { if (e.target === editModal) closeEditModal(); });
+
+
+// --- Delete Modal Logic ---
+function openDeleteModal() {
+  deleteModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeDeleteModal() {
+  deleteModal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+if (cancelDeleteBtn) cancelDeleteBtn.addEventListener("click", closeDeleteModal);
+const cancelDelete = document.getElementById("cancelDelete");
+if (cancelDelete) cancelDelete.addEventListener("click", closeDeleteModal);
+if (deleteModal) deleteModal.addEventListener("click", e => { if (e.target === deleteModal) closeDeleteModal(); });
+
+if (confirmDeleteBtn) {
+  confirmDeleteBtn.addEventListener("click", () => {
+    const idx = projects.findIndex(p => p.id === currentProjectId);
+    if (idx !== -1) {
+      projects.splice(idx, 1);
+      renderProjects();
+      updateAllMetrics();
+      closeDeleteModal();
+    }
+  });
+}
+
+// Make functions global for onclick handlers
+window.deleteProject = deleteProject;
+window.editProject = editProject;
+window.toggleVote = toggleVote;
+window.handleAddIdea = handleAddIdea;
+window.removeTag = removeTag;
